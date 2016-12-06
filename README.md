@@ -4,7 +4,7 @@ This lab intends to demonstrate how to create a simple cluster with load balanci
 
 ## Building the cluster
 
-The cluster that will be created consists of the following nodes (i.e. servers/computers):
+The cluster that will be created should consist of the following nodes (i.e. servers/computers):
 
 * gateway
 * master node and
