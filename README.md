@@ -46,7 +46,7 @@ Once you have logged in to all the servers, find their IP addressess and keep a 
 ```
 sudo nano /etc/hostname
 ```
-For example, the new names of the nodes could be `master`, `node1` and `node2` respectively.
+For example, the new hostnames of the master server and the two compute servers could be `master`, `node1` and `node2` respectively. 
 
 
 
