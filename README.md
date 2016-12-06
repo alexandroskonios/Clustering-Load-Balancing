@@ -3,7 +3,7 @@
 This lab intends to demonstrate how to create a simple cluster with load balancing. By the end of the lab you will have a network that consists of the gateway, the master node and the compute nodes.
 
 ## Clustering
-In the first part of this tutorial, you will go through the set-up of the cluster. 
+In the first part of this tutorial, you will go through the set-up of the cluster. This requires the configuration of the servers, the installation of the **Network File System (NFS)**, the set-up of the **SSH** communication between the nodes and the installation of the **process manager** of the cluster. 
 
 ### Building the cluster
 
