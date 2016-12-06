@@ -29,6 +29,8 @@ Finally, to create the second compute node you need to make a **linked clone** o
 
 **NOTE:** Before you boot all your cluster nodes up, check that their network adapters are all set to the **Internal Network** configuration.
 
+- - - -
+
 ## Configuring the Cluster Nodes
 
 Boot up your **gateway** server and make sure that **DHCP** services are running. After that, boot up all the other servers and log in either as `root` or `newuser` (preferably as newuser).
@@ -39,6 +41,15 @@ Boot up your **gateway** server and make sure that **DHCP** services are running
  
 * To log in to the _master node_, you need to user `newuser` as username and `raspberry` as password.
 
-Once you have logged in to all the servers, find their IP addressess and keep a note of them (In this case, the IP addresses are: `10.5.5.10` for the _master_ node, `10.5.5.9` for _node1_ and `10.5.5.18` for _node2_).
+Once you have logged in to all the servers, find their IP addressess and keep a note of them (In this case, the IP addresses are: `10.5.5.10` for the _master_ node, `10.5.5.9` for _node1_ and `10.5.5.18` for _node2_). Furthermore, change the name of the nodes by using `nano` to edit their `hostname` file.
+
+```
+nano /etc/hostname
+```
+
+
+
+
+
 
 
