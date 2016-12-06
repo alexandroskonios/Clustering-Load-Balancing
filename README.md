@@ -21,7 +21,7 @@ To create the _master_ node you need to import the _Debian Desktop_ appliance, n
 
 ### Creating the compute nodes
 
-To create the first node of the two compute nodes of the cluster you need to import the _Debian Server_ appliance, then double click on the name tab and name it as **Cluster node1**. Then, tick the reinitialise box and click the _Import_ button to complete the process.
+To create the first node of the two compute nodes of the cluster follow the same way as for the **master** node but this time import the _Debian Server_ appliance instead of the _Debian Desktop_ one. Now, double click on the name tab, name the new server as **Cluster node1**, tick the reinitialise MAC address box and click the _Import_ button to complete the process.
 
 <img src = "images/Importing Debian Server.png" width = "500" height = "350">
 
