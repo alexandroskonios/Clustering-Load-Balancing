@@ -64,8 +64,11 @@ ping -c 5 node1
 ping -c 5 node2
 ```
 
-Try these commands with different nodes on different nodes. If you have setup 
+Try these commands with different nodes on different nodes. If you have set up your network correctly, you should be able to see the information about the exchanged packages.  
 
+In this tutorial, the master server is used as the master node of the cluster. This means that once the cluster has been set up, the _master_ node will be used to start jobs on it. These jobs will be executed by the two compute nodes, _node1_ and _node2_.   
+
+- - - -
 
 
 
