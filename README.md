@@ -32,3 +32,9 @@ Finally, to create the second compute node you need to make a **linked clone** o
 ## Configuring the Cluster Nodes
 
 Boot up your **gateway** server and make sure that **DHCP** services are running. After that, boot up all the other servers and log in either as `root` or `newuser` (preferably as newuser).
+
+* To log in to the _compute nodes_, you need to enter the following credentials:
+ * `root` or `newuser` as username and
+ * `raspberry` as password.
+ 
+* To log in to the _master node_, you need to user `newuser` as username and `raspberry` as password.
