@@ -15,5 +15,5 @@ For this lab you can use the _Alpine_ **gateway** server that you have created i
 ### Creating the master node
 To create the **master** node you need to import the _Debian Desktop_ appliance, name it as _Master node_ and reinitialise the MAC address as shown in the figure below. 
 
-<img src = "images/Importing Debian Desktop.png" width = "350" height = "450">
+<img src = "images/Importing Debian Desktop.png" width = "500" height = "350">
 
