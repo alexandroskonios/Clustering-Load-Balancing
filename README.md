@@ -13,7 +13,18 @@ The cluster that will be created should consist of the following nodes (i.e. ser
 For this lab you can use the _Alpine_ **gateway** server that you have created in the previous labs. For the creation of the _master_ and _compute_ nodes, you could use the Debian Deskop and Debian Server appliances respectively (the _links_ to download these appliances can be found at the _Cryptography_ section). 
 
 ### Creating the master node
-To create the **master** node you need to import the _Debian Desktop_ appliance, name it as _Master node_ and reinitialise the MAC address as shown in the figure below. 
+
+To create the _master_ node you need to import the _Debian Desktop_ appliance, name it as **Master nod** and reinitialise the MAC address as shown in the figure below. 
 
 <img src = "images/Importing Debian Desktop.png" width = "500" height = "350">
+
+
+### Creating the compute nodes
+
+To create the first node of the two compute nodes of the cluster you need to import the _Debian Server_ appliance, then double click on the name tab and name it as **Cluster node1**. Then, tick the reinitialise box and click the _Import_ button to complete the process.
+
+<<img src = "images/Importing Debian Server.png" width = "500" height = "350">>
+
+Finally, to create the second compute node you need to make a **linked clone** of the first compute node by naming it as **Cluster node2** and reinitialising the _MAC address_.  
+
 
