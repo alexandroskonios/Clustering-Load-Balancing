@@ -58,7 +58,7 @@ You also need to edit the `hosts` file of each node (i.e. master, node1 and node
 10.5.5.18 node2
 ```
 
-Do not make further changes to the `host` file, leave the rest of the file as it is, then save the changes and exit the file.
+Do not make further changes to the `hosts` file, leave the rest of the file as it is, then save the changes and exit the file.
 Once you save the file, you can use the host names to `ping` or `curl` the other nodes of the cluster. For instance, check the connectivity of your network using the `ping` command on each server.
 
 ```
