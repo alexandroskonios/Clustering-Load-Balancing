@@ -41,12 +41,13 @@ Boot up your **gateway** server and make sure that **DHCP** services are running
  
 * To log in to the _master node_, you need to user `newuser` as username and `raspberry` as password.
 
-Once you have logged in to all the servers, find their IP addressess and keep a note of them (In this case, the IP addresses are: `10.5.5.10` for the _master_ node, `10.5.5.9` for _node1_ and `10.5.5.18` for _node2_). Furthermore, change the name of the cluster nodes by using `nano` to edit their `hostname` file and substitute `debian` for the name of each node. 
+Once you have logged in to all the servers, find their IP addressess and keep a note of them (In this case, the IP addresses are: `10.5.5.10` for the _master_ node, `10.5.5.9` for _node1_ and `10.5.5.18` for _node2_). Furthermore, change the name of the cluster nodes by using `nano` to edit their `hostname` file and substitute `debian` for the name of each node. For example, the new hostnames of the master server and the two compute servers could be `master`, `node1` and `node2` respectively. 
 
 ```
 sudo nano /etc/hostname
 ```
-For example, the new hostnames of the master server and the two compute servers could be `master`, `node1` and `node2` respectively. 
+
+
 
 
 
