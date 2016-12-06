@@ -47,8 +47,15 @@ Once you have logged in to all the servers, find their IP addressess and keep a 
 sudo nano /etc/hostname
 ```
 
+You also need to edit the `hosts` file of each node (i.e. master, node1 and node2) using `sudo nano /etc/hosts`. Then, add the following lines after the first two lines of the file. 
 
+```
+10.5.5.10 master
+10.5.5.9  node1
+10.5.5.18 node2
+```
 
+Regarding the rest of content of the `host` file, leave it as it is. Save the changes and exit the file.
 
 
 
