@@ -39,4 +39,6 @@ Boot up your **gateway** server and make sure that **DHCP** services are running
  
 * To log in to the _master node_, you need to user `newuser` as username and `raspberry` as password.
 
-Once you have logged in to all the servers, find their IP addressess and keep a note of them (For this tutorial, the IP addresses are: `10.5.5.10` for the _master_ node, `10.5.5.9` for _node1_ and `10.5.5.18` for _node2_).
+Once you have logged in to all the servers, find their IP addressess and keep a note of them (In this case, the IP addresses are: `10.5.5.10` for the _master_ node, `10.5.5.9` for _node1_ and `10.5.5.18` for _node2_).
+
+
