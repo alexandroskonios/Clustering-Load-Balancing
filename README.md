@@ -140,3 +140,13 @@ If this fails reboot the node and try again. If it works without any problem, th
 ```
 master:/home/jobhandler /home/jobhandler nfs
 ```
+
+Reboot the compute nodes and check whether the shared directory is automatically mounted by listing its contents on each compute node when you run the following command.
+
+```
+ls /home/jobhandler
+```
+
+This should show all the files and directories included in the shared directory `/home/jobhandler` of the master node.
+
+- - - -
