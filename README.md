@@ -174,7 +174,7 @@ After the key generation, all nodes should share the same _SSH key_. The master 
 ssh-copy-id localhost
 ```
 
-Master's own _public SSH key_ should now be copied to `/home/jobhandler/.ssh/authorized_keys`. To check that all nodes have master's _public SSH key_ in the list of known hosts try to remotely login on the compute nodes from the master node without providing password. 
+Master's own _public SSH key_ should now be copied to `/home/jobhandler/.ssh/authorized_keys`. To check that all nodes have master's _public SSH key_ in the list of known hosts try to remotely login on the compute nodes from the master node without providing password. Finally, check that you can be securely connected to all the compute nodes using _ssh_. For example, run `ssh node1` and `ssh node2`.
 
 If connected successfully you could `echo` the hostname of the compute node using the following command:
 
@@ -182,4 +182,4 @@ If connected successfully you could `echo` the hostname of the compute node usin
 echo $HOSTNAME
 ```
 
-Finally, check that you can be securely connected to all the compute nodes using _ssh_. For example, run `ssh node1` and `ssh node2`.
+
