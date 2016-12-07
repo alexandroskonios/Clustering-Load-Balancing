@@ -135,7 +135,7 @@ Now, mount the `master:/home/jobhandler` from the compute nodes (i.e. _node1_ an
 sudo mount master:/home/jobhandler /home/jobhandler
 ```
 
-If this fails reboot the node and try again. If it works without any problem, then you should be able to see the content of the shared directory of the master node. You could also check if changes to the content of the shared directory are immediately visible to all the compute nodes by creating a new file or directory in it. If mounting the _NFS_ works, you could make it so that the `master:/home/jobhandler` directory is automatically mounted when the compute nodes are booted. To do this, you should edit the file `/etc/fstab` of each compute node adding the command line below:
+If this fails reboot the node and try again. If it works without any problem, then you should be able to see the content of the shared directory of the master node. You could also check if changes to the content of the shared directory are immediately visible to all the compute nodes by creating a new file or directory in it. If mounting the _NFS_ works, you could make it so that the `master:/home/jobhandler` directory is automatically mounted when the compute nodes are booted. To do this, use _nano_ edit the file `/etc/fstab` of each compute node adding the command line below:
 
 ```
 master:/home/jobhandler /home/jobhandler nfs
