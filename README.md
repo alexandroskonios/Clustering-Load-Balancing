@@ -165,3 +165,21 @@ Now, you need to generate an **SSH key** for the _MPI_ users of all the cluster 
 ```
 ssh-keygen
 ```
+
+When prompt for a passphrase, leave it empty. This is how you can establish a **passwordless SSH**.
+
+After the key generation, all nodes should share the same _SSH key_. The master node needs to be able to automatically login to the compute nodes. To enable this, the _public SSH key_ of the master node needs to be added to the list of known hosts (this is usually the `authorized_keys` file that is located at `/home/jobhandler/.ssh/authorized_keys`) of all the nodes. But this is easy since all SSH key date is stored in the location `/home/jobhandler/.ssh/` on the _master_ node. Thus, instead of copying master's _public SSH key_ to all compute nodes separately, you just have to copy it to master's own `authorized_keys` file. There is a command to push the _public SSH key_ of the currently logged in user to another computer. Run the follwoing command on _master_ node as `jobhandler`:
+
+```
+ssh-copy-id localhost
+```
+
+Master's own _public SSH key_ should now be copied to `/home/jobhandler/.ssh/authorized_keys`. To check that all nodes have master's _public SSH key_ in the list of known hosts try to remotely login on the compute nodes from the master node without providing password. 
+
+If connected successfully you could `echo` the hostname of the compute node using the following command:
+
+```
+echo $HOSTNAME
+```
+
+Finally, check that you can be securely connected to all the compute nodes using _ssh_. For example, run `ssh node1` and `ssh node2`.
