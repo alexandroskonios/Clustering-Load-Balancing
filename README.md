@@ -93,6 +93,10 @@ Files and programmes used for the execution of **MPI jobs**, which could run con
 sudo apt-get install nfs-kernel-server -y
 ```
 
+In order to mount a file system on the compute nodes, the **nfs-common** package should be installed on all the compute nodes of the cluster.
 
+``` 
+sudo apt-get install nfs-common -y
+```
 
 
