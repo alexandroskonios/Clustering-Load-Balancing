@@ -73,7 +73,7 @@ In this tutorial, the master server is used as the master node of the cluster. T
 
 - - - -
 
-### Defining a user for running the MPI jobs
+### Defining a user to run the Message Passing Interface (MPI) jobs
 
 At this point, you need to create a new user for each cluster node. This new user account will be used to run the MPI jobs of each node of the cluster. Now, use the following command to create a user with username **jobhandler** and user ID **100** on every server.
 
@@ -85,6 +85,13 @@ It is important that all the MPI users have the same _username_ and _user ID_ on
 
 - - - -
 
+### Install and Set up Network File System (NFS)
+
+Files and programmes used for the execution of **MPI jobs**, which could run concurrently on the cluster, need to be available to all the nodes that participate in the execution process. Therefore, these nodes need to have access to a part of the file system on the **master** node. **NFS** enables you to mount part of a remote file system so you can access it as if it is a local directory. To install **NFS**, run the following command on the _master_ node:
+
+```
+sudo apt-get install nfs-kernel-server -y
+```
 
 
 
