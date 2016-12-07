@@ -183,3 +183,7 @@ echo $HOSTNAME
 ```
 
 To exit the _SSH_ communication type in `exit` in your terminal or command line.
+
+- - - -
+
+### Installing and Setting up the Process Manager 
