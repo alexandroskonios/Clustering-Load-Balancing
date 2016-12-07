@@ -99,4 +99,15 @@ In order to mount a file system on the compute nodes, the **nfs-common** package
 sudo apt-get install nfs-common -y
 ```
 
+To share the MPI user's home directory (i.e. `/home/jobhandler`) of the master node (all the MPI jobs will be run there) with the compute nodes, you need to use **NFS**. It is important that this directory is owned by the _MPI user_ of the master node so that all the _MPI users_ can access this directory. But since this home directory has been created using the **adduser** command, it is already owned by the MPI user of the master node. Use the command below to check the ownership of the directory:
+
+```
+ls -l /home/ | grep jobhandler
+```
+
+Now, share the `/home/jobhandler/` directory of the master node with all the other nodes. For this, you need to edit the file `/etc/exports` on the master node. Use the `nano` editor to add the following line to this file:
+
+```
+/home/jobhandler *(rw,sync,no_subtree_check)
+```
 
