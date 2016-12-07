@@ -75,12 +75,13 @@ In this tutorial, the master server is used as the master node of the cluster. T
 
 ### Defining a user for running the MPI jobs
 
-At this point, you need to create a new user for each cluster node. This new user account will be used to run the MPI jobs of each node of the cluster. Now, create a user with username **jobhandler** and user ID **100** on every server, as shown below:
+At this point, you need to create a new user for each cluster node. This new user account will be used to run the MPI jobs of each node of the cluster. Now, use the following command to create a user with username **jobhandler** and user ID **100** on every server.
 
 ```
 sudo adduser jobhandler --uid 100
 ```
 
+It is important that all the MPI users have the same _username_ and _user ID_ on each node for your convenience. For example, the user IDs for the MPI users need to be the same because you will give access to them on the _NFS_ directory later. Permissions on NFS directories are checked with respect to the user IDs.
 
 
 
