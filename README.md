@@ -121,3 +121,12 @@ This command also exports the directories listed in the `/etc/exports` file. In 
 ```
 sudo exportfs -a
 ```
+
+The `/home/jobhandler` directory should now be shared with the compute nodes through **NFS**. To test this, you should run the command below on any compute node getting as output the shared directory (i.e. `/home/jobhandler *`).
+
+```
+sudo showmount -e master
+```
+All data files and programs that will be used for running an _MPI_ job must be placed in the shared directory of the _master_ node. Then, all the other nodes, with which the master node shares the directory, will be able to access these files and programs through **NFS**.
+
+Now mount the 
