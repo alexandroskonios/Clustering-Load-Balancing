@@ -151,5 +151,6 @@ This should show all the files and directories included in the shared directory 
 
 - - - -
 
-### Set up the SSH communicaton between the nodes
+### Setting up the SSH communicaton between the nodes
 
+For the cluster to work, the **master** node needs to be able to communicate securely with the compute nodes and vice versa. For this, you should use the **Secure Shell (SSH)** to establish a passwordless communication between the nodes so as to enable the _master_ node to run commands on the _compute_ nodes. This is needed to run the **MPI daemons** on the available compute nodes.
