@@ -110,4 +110,14 @@ Now, share the `/home/jobhandler/` directory of the master node with all the oth
 ```
 /home/jobhandler *(rw,sync,no_subtree_check)
 ```
+After having finished with the installation of the **NFS** server on the _master_ node, you may need to restart it as follows:
 
+```
+sudo service nfs-kernel-server restart
+```
+
+This command also exports the directories listed in the `/etc/exports` file. In the future when this file is modified, you need to run the following command to export the directories listed in `/etc/exports` file of the _master_ node.
+
+```
+sudo exportfs -a
+```
