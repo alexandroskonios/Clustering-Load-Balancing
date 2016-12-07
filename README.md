@@ -81,7 +81,11 @@ At this point, you need to create a new user for each cluster node. This new use
 sudo adduser jobhandler --uid 100
 ```
 
-It is important that all the MPI users have the same _username_ and _user ID_ on each node for your convenience. For example, the user IDs for the MPI users need to be the same because you will give access to them on the _NFS_ directory later. Permissions on NFS directories are checked with respect to the user IDs.
+It is important that all the MPI users have the same _username_ and _user ID_ on each node for your convenience. For example, the user IDs for the MPI users need to be the same because you will give access to them on the _NFS_ directory later. Permissions on the **Network File Systems (NFS)** directories are checked with respect to the user IDs. Furthermore, enter a password for the created user when prompted. It is recommended to give the same password to the MPI user of each cluster node so you have to remember only one password. The above command should also create a new home directory for the created user (i.e. `/home/jobhandler`), which you will use to execute the jobs on the cluster.
+
+- - - -
+
+
 
 
 
