@@ -150,3 +150,6 @@ ls /home/jobhandler
 This should show all the files and directories included in the shared directory `/home/jobhandler` of the master node.
 
 - - - -
+
+### Set up the SSH communicaton between the nodes
+
