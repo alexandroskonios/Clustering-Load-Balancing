@@ -160,3 +160,8 @@ As you have already learnt in one of the previous tutorials/labs (see _Software 
 ```
 sudo apt-get install openssh-server
 ```
+Now, you need to generate an **SSH key** for the _MPI_ users of all the cluster nodes, which will be by default created in the MPI user's home directory. Remember that in your case the _MPI_ user's home directory (i.e. `/home/jobhandler`) is actually the same directory for all nodes: the `/home/jobhandler` directory of the **master** node. Consequently, if you generate an _SSH key_ for the _MPI_ user on one of the nodes, all the other nodes will automatically have an _SSH key_. Let's generate that **SSH key**  for the _MPI_ user of the **master node** (but any node should be fine). In case that you are not logged in as `jobhandler` use the `su` command to switch to it from your current user account and then generate the _SSH key_.
+
+```
+ssh-keygen
+```
