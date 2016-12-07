@@ -182,4 +182,4 @@ If connected successfully you could `echo` the hostname of the compute node usin
 echo $HOSTNAME
 ```
 
-
+To exit the _SSH_ communication type in `exit` in your terminal or command line.
