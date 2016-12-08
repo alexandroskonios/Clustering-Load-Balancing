@@ -261,8 +261,9 @@ Once you have completed the compilation of all the projects, place their executa
 
 Having moved all the executables to the `bin` directory, you should be able to run one of the example _MPI_ jobs like `cpi`, `pmandel` and `hellow`. Before you run them make sure that you have logged in as `jobhandler` on the _master_ node.
 
-Run **Hydra** process manager to execute the _MPI_ jobs on the cluster. For example use the following command **on the master node** to run the `cpi` job which calculates \pi:
+Run **Hydra** process manager to execute the _MPI_ jobs on the cluster. For example use the following command **on the master node** to run the `cpi` job which calculates `π`:
 
 ```
 mpiexec -f hosts -n 2 /home/jobhandler/bin/cpi
 ```
+Substitute _2_ for the number of compute nodes on which you want to run this job. You could also change the job that the nodes will work on by replacing `cpi` with another job. Try to run all the available example jobs to see what they are doing. Finally, if you want to test the cluster that you set up, you can run software tools or programs making it more realistic. 
