@@ -370,4 +370,6 @@ curl http://10.0.2.5:80
 ```
 Using the browser of the external server this time, you should be able to see that the web-server alternate each time that you refresh the web page that refers to the external IP of the _load balancer_ (i.e. `http:10.0.2.5:80`).
 
+<img src = "images/External_IP_address_load_balancer.png" width = "550" height = "350">
+
 **Note that** you should get the same response when you make a request either from an internal or external server.
