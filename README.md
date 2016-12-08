@@ -234,4 +234,10 @@ In case that you want to consider the _master_ node as a node that will run jobs
 
 ### Running Jobs on the Cluster
 
-The _MPICH_ package that you installed earlier comes with a few example application that you could run on your newly created cluster.
+The _MPICH_ package that you installed earlier comes with a few example application that you could run on your newly created cluster. To obtain these examples, download the **mpich-3.1** source package and extract the archive to a directory (e.g. the home directory `/home/jobhandler`).
+
+```
+sudo apt-get build-dep mpich
+wget http://www.mpich.org/static/downloads/3.1/mpich-3.1.tar.gz
+tar -xvzf mpich-3.1.tar.gz
+```
