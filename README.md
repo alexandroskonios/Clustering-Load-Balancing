@@ -214,4 +214,8 @@ mpiexec --version | less
 ```
 In this case, you notice that it is indeed **Hydra** process manager that has been installed (as was expected). The version of _Hydra_ process manager that runs on the cluster nodes is **3.1** (when this tutorial was written).
 
-Now, you will configure the **Hydra** process manager. In order to set up _Hydra_, you need to create a file on the **master** node. This file will contain all the host names of the compute nodes. You can create this file anywhere you want, but for simplicity create it in the **_home_ directory** of the _jobhandler_ user of the _master_ node (i.e. `/home/jobhandler`).
+Now, you will configure the **Hydra** process manager. In order to set up _Hydra_, you need to create a file **on the master** node. This file will contain all the host names of the compute nodes. You can create this file anywhere you want, but for simplicity create it in the **home directory** of the **jobhandler** user of the _master_ node (i.e. `/home/jobhandler`).
+
+```
+sudo touch hosts
+```
