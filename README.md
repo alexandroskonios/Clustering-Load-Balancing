@@ -198,6 +198,8 @@ Runnig the above command, you should get an output similar to that in the figure
 
 <img src = "images/MPICH_version.png">
 
+From the output, you can see that **MPICH** has not been installed yet as the `Installed` label is followed by the indication `(none)`. The `Candidate` informs you that there is only one version available for installation: 3.1-5+b2. It also tells you which repository it comes from. This information is important for the set-up of the **process manager** as the _process manager_ of the _MPICH_ till the version 1.2 was the **MPD** manager, but from version 1.3 and on **Hydra** is used as the _process manager_ of _MPICH_.   
+
 Now proceed with the update of the repositories and the installation of the **MPICH** package.
 
 ```
