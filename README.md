@@ -274,6 +274,7 @@ Substitute _2_ for the number of compute nodes on which you want to run this job
 
 In this part of the tutorial you will set up a load balancer for your internal network using **nginx**. For this, you need to use three servers, the `gateway` and the two `compute nodes`. In this scenario, the _gateway_ will act as your **load balancer** and the _compute_ nodes will be the **web-servers** of the internal network. 
 
+### Configuring the Web-servers
 First, install **nginx** on your compute nodes _node1_ and _node2_ (if not already installed).
 
 ```
@@ -296,4 +297,14 @@ Now, replace the content of the default _nginx_ webpage with the name of the nod
 uname -n | sudo tee /var/www/html/index.nginx-debian.html
 ```
 
-Changing the content to the names of teh web-servers will help you later on to identify the server that runs and also to understand how the load balancing works.
+Changing the content to the names of the web-servers it will help you later on to identify the server that runs a job and also to understand how the load balancing works.
+
+Now, make a request to the web-server of your choice to check whether you can `curl` it. If `curl` package is not already installed on your servers, install it using the `apt-get` command. To _curl_ a web-server from the internal network, you need to use its IP address. Check that you can curl your web-servers from any other node. For example, you could curl a web-server either curling from another node or from itself.
+
+```
+(from another server:) curl 10.5.5.18
+(from itself:)         curl localhost 
+```
+You should get the content of the _html_ page in response (i.e. the name of the server that your curl).
+
+### Configuring the Load Balancer
