@@ -206,3 +206,10 @@ Now, proceed with the update of the repositories and the installation of the **M
 sudo apt-get update
 sudo apt-get install mpich
 ```
+
+After that, you can run the following command, **on all cluster nodes**, to check the version of the installed process manager.  
+
+```
+mpiexec --version | less
+```
+In this case, you notice that it is indeed **Hydra** process manager that has been installed (as was expected). The version of _Hydra_ process manager that runs on the cluster nodes is **3.1** (when this tutorial was written).
