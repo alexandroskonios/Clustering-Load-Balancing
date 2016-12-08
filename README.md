@@ -243,4 +243,26 @@ tar -xvzf mpich-3.1.tar.gz
 ```
 
 Having finished with the extraction of the downloaded package, you can navigate into the extracted directory, i.e. `cd /home/jobhandler/mpich-3.1` (**Note:** this applies only to the case where you have put this directory into the home directory of the _jobhandler_ user. If you have put the extracted directory somewhere else, navigate into it using the respective path).
+This directory should contain an `examples` directory, where you could find the source codes of the example applications. You need to compile these by your own. To do this, run the following commands (while you are in the `mpich-3.1` directory):
 
+```
+./configure
+make
+```
+
+After you have compiled it, you can navigate into the `examples` directory. You will notice that the `cpi` example application is the only application that is compiled by default, so you can run it on your cluster. But, if you want you can build and compile other examples as well like `pmandel`, `hellow`, `parent`,etc. running the following commands in the `example` directory:
+
+```
+make pmandel
+make hellow
+```
+
+Once you have completed the compilation of all the projects, place their executable files somewhere inside the _home_ directory of the _jobhandler_ user of the _master_ node. It is common practice to put all the executables in a `bin` directory, so you could create this directory (i.e. `/home/jobhandler/bin`) and move or copy all these files there making them available to all the other nodes (i.e. the _compute nodes_).
+
+Having moved all the executables to the `bin` directory, you should be able to run one of the example _MPI_ jobs like `cpi`, `pmandel` and `hellow`. Before you run them make sure that you have logged in as `jobhandler` on the _master_ node.
+
+Run **Hydra** process manager to execute the _MPI_ jobs on the cluster. For example use the following command **on the master node** to run the `cpi` job which calculates `π`:
+
+```
+mpiexec -f hosts -n 2 /home/jobhandler/bin/cpi
+```
