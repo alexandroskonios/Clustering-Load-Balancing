@@ -220,5 +220,11 @@ Now, you will configure the **Hydra** process manager. In order to set up _Hydra
 sudo touch hosts
 ```
 
-Now that you have created the `hosts` file in the home directory of the _jobhandler_, you need to edit it with `nano` and add the names of the compute nodes in it in order to make the _jobhandler_ user of the _master_ node able to send out jobs to them.
+Now that you have created the `hosts` file in the home directory of the _jobhandler_, you need to edit it with `nano` and add the names of the compute nodes in it in order to make the _jobhandler_ user of the _master_ node able to send out jobs to them. Run `sudo nano hosts` command and put the following information into the `hosts` file.
+
+```
+node1
+node2
+```
+Once finished, save the changes and exit the file.
 
