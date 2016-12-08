@@ -289,3 +289,11 @@ sudo netstat -ntlp
 You will notice that `nginx` is listening on `port 80`, which is the default port for the `HTTP` traffic as shown in the figure below.
 
 <img src = "images/Netstat_output.png" width = "550" height = "350">
+
+Now, replace the content of the default _nginx_ webpage with the name of the node that you work on. **Apply this to all the web-servers of your network**. The _nginx_ webpage should, by default, be located at the `/var/www/html` directory. 
+
+```
+uname -n | sudo tee /var/www/html/index.nginx-debian.html
+```
+
+Changing the content to the names of teh web-servers will help you later on to identify the server that runs and also to understand how the load balancing works.
