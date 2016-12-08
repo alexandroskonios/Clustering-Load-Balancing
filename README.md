@@ -186,4 +186,21 @@ To exit the _SSH_ communication type in `exit` in your terminal or command line.
 
 - - - -
 
-### Installing and Setting up the Process Manager 
+### Installing and Setting up the Process Manager
+
+In this section, you go through the installation of the **process manager**, which is needed to distribute and manage the jobs that run on the cluster. The _process manager_ that will be used in this tutorial is included in the **MPICH** package, so you should start by installing that package on **all the nodes of the cluster** (preferably after updating the repositories). But, before you do this, check the available version of the **MPICH** package as follows:
+
+```
+sudo apt-cache policy mpich
+```
+
+Runnig the above command, you should get an output similar to that in the figure below.
+
+<img src = "images/MPICH_version.png" width = "500" height = "350">
+
+Now proceed with the update of the repositories and the installation of the **MPICH** package.
+
+```
+sudo apt-get update
+sudo apt-get install mpich
+```
