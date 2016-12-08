@@ -273,3 +273,19 @@ Substitute _2_ for the number of compute nodes on which you want to run this job
 ## Load Balancing using Nginx
 
 In this part of the tutorial you will set up a load balancer for your internal network using **nginx**. For this, you need to use three servers, the `gateway` and the two `compute nodes`. In this scenario, the _gateway_ will act as your **load balancer** and the _compute_ nodes will be the **web-servers** of the internal network. 
+
+First, install **nginx** on your compute nodes _node1_ and _node2_ (if not already installed).
+
+```
+sudo apt-get install nginx -y
+```
+
+Afterwards, check if _nginx_ is running on your nodes using the `netstat` command.
+
+```
+sudo netstat -ntlp
+```
+
+You will notice that `nginx` is listening on `port 80`, which is the default port for the `HTTP` traffic as shown in the figure below.
+
+<img src = "images/Netstat_output.png" width = "500" height = "350">
