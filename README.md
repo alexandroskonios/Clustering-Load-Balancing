@@ -267,3 +267,9 @@ Run **Hydra** process manager to execute the _MPI_ jobs on the cluster. For exam
 mpiexec -f hosts -n 2 /home/jobhandler/bin/cpi
 ```
 Substitute _2_ for the number of compute nodes on which you want to run this job. You could also change the job that the nodes will work on by replacing `cpi` with another job. Try to run all the available example jobs to see what they are doing. Finally, if you want to test the cluster that you set up, you can run software tools or programs making it more realistic. 
+
+- - - -
+
+## Load Balancing using Nginx
+
+In this part of the tutorial you will set up a load balancer for your internal network using **nginx**. For this, you need to use three servers, the `gateway` and the two `compute nodes`. In this scenario, the _gateway_ will act as your **load balancer** and the _compute_ nodes will be the **web-servers** of the internal network. 
