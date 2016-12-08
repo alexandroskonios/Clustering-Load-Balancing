@@ -196,7 +196,7 @@ sudo apt-cache policy mpich
 
 Runnig the above command, you should get an output similar to that in the figure below.
 
-<img src = "images/MPICH_version.png" width = "500" height = "350">
+<img src = "images/MPICH_version.png">
 
 Now proceed with the update of the repositories and the installation of the **MPICH** package.
 
