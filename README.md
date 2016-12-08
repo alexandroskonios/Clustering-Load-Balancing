@@ -241,3 +241,6 @@ sudo apt-get build-dep mpich
 wget http://www.mpich.org/static/downloads/3.1/mpich-3.1.tar.gz
 tar -xvzf mpich-3.1.tar.gz
 ```
+
+Having finished with the extraction of the downloaded package, you can navigate into the extracted directory, i.e. `cd /home/jobhandler/mpich-3.1` (**Note:** this applies only to the case where you have put this directory into the home directory of the _jobhandler_ user. If you have put the extracted directory somewhere else, navigate into it using the respective path).
+
