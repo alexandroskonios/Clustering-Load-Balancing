@@ -361,3 +361,13 @@ curl http://10.5.5.1:80
 You can also use a web browser to reach the _public IP address_ of the _load balancer_. Open your browser and type in the _public IP address_. You should get the name of one of the web servers in response each time you refresh the browser. 
 
 <img src = "images/Public_IP_address_load_balancer.png" width = "550" height = "350">
+
+Now, use an external server to curl the _external IP address_ of the _load balancer_ (for the network of this tutorial, the external IP address of the _load balancer (gateway)_ is `10.0.2.5`).
+
+```
+curl 10.0.2.5 OR
+curl http://10.0.2.5:80
+```
+Using the browser of the external server this time, you should be able to see that the web-server alternate each time that you refresh the web page that refers to the external IP of the _load balancer_ (i.e. `http:10.0.2.5:80`).
+
+**Note that** you should get the same response when you make a request either from an internal or external server.
