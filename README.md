@@ -228,3 +228,4 @@ node2
 ```
 Once finished, save the changes and exit the file.
 
+In case that you want to consider the _master_ node as a node that will run jobs (i.e. as a compute node), you can add its name in the `hosts` file. If you do that, the master node will also act as a compute node. **Note that** the `hosts` file only needs to be present on the node that is used to start jobs on the cluster, in your case this node is the _master_ node. But since the _home_ directory of the _jobhandler_ of the _master_ node is shared with all the compute nodes, the `hosts` file will also be accessible from them. 
