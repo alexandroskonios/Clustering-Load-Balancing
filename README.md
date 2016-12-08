@@ -308,3 +308,11 @@ Now, make a request to the web-server of your choice to check whether you can `c
 You should get the content of the _html_ page in response (i.e. the name of the server that your curl).
 
 ### Configuring the Load Balancer
+
+Install **nginx** on your gateway server using the command below:
+
+```
+sudo apk add nginx
+```
+
+If installation fails update the server and 
