@@ -315,4 +315,32 @@ Install **nginx** on your gateway server using the command below:
 sudo apk add nginx
 ```
 
-If installation fails update the server and 
+If installation fails perform an update to the _gateway_ server (i.e. `sudo apk update`) and try again. Once _nginx_ has been installed, edit its configuration file.
+
+```
+sudo nano /etc/nginx/nginx.conf
+```
+Delete everything that is in the configuration file and add the following lines of code. Alternatively, you can amend this file so as to be like below.
+
+```
+events{
+
+}
+
+http{
+   upstream web_backend{
+   server 10.5.5.9:80;
+   server 10.5.5.18:80;
+   }
+   
+   server{
+      listen 80;
+       
+      location / {
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_pass http://web_backend;
+      }
+   }
+}
+```
+In the above code, first you define the backend web-servers by listing their IP addresses, i.e. the IP addresses of `node1` and `node2` (substitute the IP addresses mentioned above for the IP addresses that apply to your case). 
