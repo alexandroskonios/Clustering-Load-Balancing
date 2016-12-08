@@ -288,4 +288,4 @@ sudo netstat -ntlp
 
 You will notice that `nginx` is listening on `port 80`, which is the default port for the `HTTP` traffic as shown in the figure below.
 
-<img src = "images/Netstat_output.png" width = "500" height = "350">
+<img src = "images/Netstat_output.png" width = "550" height = "350">
