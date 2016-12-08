@@ -343,4 +343,21 @@ http{
    }
 }
 ```
-In the above code, first you define the backend web-servers by listing their IP addresses, i.e. the IP addresses of `node1` and `node2` (substitute the IP addresses mentioned above for the IP addresses that apply to your case). 
+In the above code, first you define the backend web-servers by listing their IP addresses, i.e. the IP addresses of `node1` and `node2` (substitute the IP addresses mentioned above for the IP addresses that apply to your case). Next, you tell _nginx_ to pass all the traffic to those servers using the **Round-robin (RR)** algorithm by default. Save the changes and exit the file.
+
+Reload the configuration for _nginx_ on the _gateway_ server using the `nginx -s reload` command. If _nginx_ has not started, use `service nginx start` to make it start.
+
+After that, make sure that **SSH** and **DHCP** run on the _gateway_. Now, try to make a request (i.e. `curl`) to the **load balancer** from an internal node that is not a web-server node. For this, you can use the **master** node from the first part. Before you `curl` the _gateway_ internally, you should **reboot** all the internal nodes.
+
+```
+curl 10.5.5.1
+```
+Repeating the same request for a couple of times, you will notice that the **Round-robin** algorithm works alternating between the backend servers `node1` and `node2`. Let's try to curl the _public IP address_ of the _load balancer_ from the _master_ node again to see if it works.
+
+```
+curl http://10.5.5.1:80
+```
+
+You can also use a web browser to reach the _public IP address_ of the _load balancer_. Open your browser and type in the _public IP address_. You should get the name of one of the web servers in response each time you refresh the browser. 
+
+<img src = "images/Public_IP_address_load_balancer.png" width = "550" height = "350">
