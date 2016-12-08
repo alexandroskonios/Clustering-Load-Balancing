@@ -19,14 +19,14 @@ For this lab you can use the _Alpine_ **gateway** server that you have created i
 
 To create the _master_ node you need to import the _Debian Desktop_ appliance, name it as **Master node** and reinitialise the MAC address as shown in the figure below. 
 
-<img src = "images/Importing Debian Desktop.png" width = "500" height = "350">
+<img src = "images/Importing Debian Desktop.png" width = "550" height = "350">
 
 
 #### Creating the Compute Nodes
 
 To create the first node of the two compute nodes of the cluster follow the same way as for the **master** node but this time import the _Debian Server_ appliance instead of the _Debian Desktop_ one. Then, double click on the name tab, name the new server as **Cluster node1**, tick the reinitialise MAC address box and click the _Import_ button to complete the process.
 
-<img src = "images/Importing Debian Server.png" width = "500" height = "350">
+<img src = "images/Importing Debian Server.png" width = "550" height = "350">
 
 Finally, to create the second compute node you need to make a **linked clone** of the first compute node by naming it as **Cluster node2** and reinitialising the _MAC address_.  
 
