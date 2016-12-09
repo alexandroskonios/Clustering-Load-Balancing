@@ -373,3 +373,5 @@ Using the browser of the external server this time, you should be able to see th
 <img src = "images/External_IP_address_load_balancer.png" width = "550" height = "350">
 
 **Note that** you should get the same response when you make a request either from an internal or external server.
+
+- - - -
